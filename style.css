@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --strong-cyan: hsl(172, 67%, 45%);
+
+    /* ### Neutral */
+
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --tomato-red: hsl(4, 100%, 62%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-grayish-cyan);
+}
+
+.form-label {
+    color: var(--dark-grayish-cyan);
+    padding-bottom: 0.5rem;
+}
+
+#display-section h1 {
+    font-size: 2.5rem;
+    color: var(--strong-cyan);
+}
+
+.labels h2 {
+    font-size: 1rem;
+    color: var(--tomato-red);
+}
+
+#display-section h3 {
+    font-size: 0.85rem;
+    color: var(--very-light-grayish-cyan);
+}
+
+#display-section p {
+    font-size: 0.75rem;
+    color: var(--grayish-cyan);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    padding-bottom: 5rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+input {
+    background-color: var(--very-light-grayish-cyan);
+    border: 0;
+    text-align: end;
+    font-size: 1.25rem;
+    color: var(--very-dark-cyan);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    caret-color: var(--strong-cyan);
+    border: 2px solid transparent;
+}
+
+.invalid {
+    border: 2px solid var(--tomato-red);
+}
+
+input[type=text]:focus {
+    outline: 0;
+    border: 2px solid var(--strong-cyan);
+}
+
+#bill-input input[type=text] {
+    background-image: url('./images/icon-dollar.svg');
+    background-position: 1.25rem;
+    background-repeat: no-repeat;
+}
+
+#people-num-input input[type=text] {
+    background-image: url('./images/icon-person.svg');
+    background-position: 1.25rem;
+    background-repeat: no-repeat;
+}
+
+::placeholder {
+    color: var(--grayish-cyan);
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.tip-label {
+    cursor: pointer;
+    width: 6rem;
+    border-radius: 0.25rem;
+    background-color: var(--very-dark-cyan);
+    text-align: center;
+    color: var(--very-light-grayish-cyan);
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.tip-label:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    transition: 0.2s ease-in;
+}
+
+input[type="radio"]:checked + .tip-label {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    transition: 0.2s ease-in;
+}
+
+#tip-custom {
+    color: var(--very-dark-cyan);
+    width: 6.25rem;
+    padding: 0.25rem;
+}
+
+#tip-custom::placeholder {
+    text-align: center;
+}
+
+.hidden-radio {
+    position: absolute;
+    left: -9999px;
+}
+
+.hidden {
+    display: none;
+}
+
+#display-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: var(--very-dark-cyan);
+}
+
+.display-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+button {
+    width: 100%;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    border-radius: 0.35rem;
+    font-size: 1.25rem;
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    transition: background-color .2s ease-in;
+}
+
+button:hover:enabled {
+    cursor: pointer;
+    background-color: var(--light-grayish-cyan);
+}
+
+button:disabled,
+button[disabled]{
+    opacity: 0.5;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
