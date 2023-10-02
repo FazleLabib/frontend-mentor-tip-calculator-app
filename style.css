@@ -130,6 +130,7 @@ input[type=text]:focus {
 
 ::placeholder {
     color: var(--grayish-cyan);
+    font-size: 1.25rem;
 }
 
 .tip-grid {
@@ -226,9 +227,52 @@ footer {
 }
 
 .attribution { 
-    font-size: 11px; 
-    text-align: center; }
+    font-size: 12px; 
+    text-align: center; 
+
+}
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--very-dark-cyan); 
+}
+
+@media screen and (max-width: 600px) {
+
+    input {
+        font-size: 1.5rem;
+    }
+
+    ::placeholder {
+        font-size: 1.5rem;
+    }
+
+    #logo{
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .tip-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .tip-label {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    
+    #tip-custom {
+        width: 90%;;
+    }
+
+    footer {
+        position: initial;
+    }
+
 }
