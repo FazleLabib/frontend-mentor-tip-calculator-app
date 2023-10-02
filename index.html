@@ -3,42 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
-  Bill
+  <main>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <div class="container">
+      <img id="logo" src="./images/logo.svg" alt="A logo that says Splitter">
+      <div class="card">
 
-  Number of People
+        <div class="card-item" id="form-section">
 
-  Tip Amount
-  / person
+          <form>
 
-  Total
-  / person
+            <div class="number-input form-input" id="bill-input">
+              <div class="labels">
+                <label class="form-label" for="total-bill">Bill</label>
+                <h2 class="hidden" id="custom-error">Must be a number</h2>
+              </div>
+              
+              <input type="text" id="total-bill" name="total-bill" placeholder="0">
+            </div>
 
-  Reset
+            <div id="tip-input form-input">
+              <div class="labels">
+                <label class="form-label" for="tip-percentage">Select Tip %</label>
+                <h2 class="hidden" id="custom-error">Must be a number</h2>
+              </div>
+              
+
+              <div class="tip-grid">
+                <input type="radio" id="tip-5" name="tip-percentage" value="5" class="hidden-radio">
+                <label for="tip-5" class="tip-label grid-item">5%</label>
+      
+                <input type="radio" id="tip-10" name="tip-percentage" value="10" class="hidden-radio">
+                <label for="tip-10" class="tip-label grid-item">10%</label>
+      
+                <input type="radio" id="tip-15" name="tip-percentage" value="15" class="hidden-radio">
+                <label for="tip-15" class="tip-label grid-item">15%</label>
+      
+                <input type="radio" id="tip-25" name="tip-percentage" value="25" class="hidden-radio">
+                <label for="tip-25" class="tip-label grid-item">25%</label>
+      
+                <input type="radio" id="tip-50" name="tip-percentage" value="0" class="hidden-radio">
+                <label for="tip-50" class="tip-label grid-item">50%</label>
+    
+                <input type="text" class="grid-item" id="tip-custom" name="tip-percentage" value="" placeholder="Custom">
+              </div>
+
+            </div>
+
+            <div class="number-input form-input" id="people-num-input">
+              <div class="labels">
+                <label class="form-label" for="people-number">Number of People</label>
+                <h2 class="hidden" id="notZero">Can't be zero</h2>
+              </div>
+
+              <input type="text" id="people-number" name="people-number" placeholder="0">
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="card-item" id="display-section">
+          <div id="display">
+
+            <div class="display-item">
+              <div class="display-label">
+                <h3>Tip Amount</h3>
+                <p>/ person</p>
+              </div>
+              <div class="display-output">
+                <h1 id="tip-per-person">$0.00</h1>
+              </div>
+            </div>
+
+            <div class="display-item">
+              <div class="display-label">
+                <h3>Total</h3>
+                <p>/ person</p>
+              </div>
+              <div class="display-output">
+                <h1 id="total-per-person">$0.00</h1>
+              </div>
+            </div>
+
+          </div>
+        
+          <div class="button">
+            <button id="reset-btn" type="button" disabled>Reset</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/FazleLabib">Fazle Labib</a>.
+    </div>
+  </footer>
 </body>
 </html>
