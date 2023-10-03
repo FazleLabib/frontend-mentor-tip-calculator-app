@@ -272,4 +272,8 @@ footer {
         max-width: 9.25rem;
     }
 
+    .display-item {
+        padding-bottom: 0.5rem;
+    }
+
 }
