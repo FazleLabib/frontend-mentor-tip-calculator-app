@@ -29,10 +29,11 @@
             <div class="number-input form-input" id="bill-input">
               <div class="labels">
                 <label class="form-label" for="total-bill">Bill</label>
-                <h2 class="hidden" id="custom-error">Must be a number</h2>
+                <h2 class="hidden" id="total-zero">Can't be zero</h2>
+                <h2 class="hidden" id="total-error">Must be a number</h2>
               </div>
               
-              <input type="text" id="total-bill" name="total-bill" placeholder="0">
+              <input class="text-input" type="text" id="total-bill" name="total-bill" placeholder="0">
             </div>
 
             <div id="tip-input form-input">
@@ -55,10 +56,10 @@
                 <input type="radio" id="tip-25" name="tip-percentage" value="25" class="hidden-radio">
                 <label for="tip-25" class="tip-label grid-item">25%</label>
       
-                <input type="radio" id="tip-50" name="tip-percentage" value="0" class="hidden-radio">
+                <input type="radio" id="tip-50" name="tip-percentage" value="50" class="hidden-radio">
                 <label for="tip-50" class="tip-label grid-item">50%</label>
     
-                <input type="text" class="grid-item" id="tip-custom" name="tip-percentage" value="" placeholder="Custom">
+                <input type="text" class="grid-item text-input" id="tip-custom" name="tip-percentage" value="" placeholder="Custom">
               </div>
 
             </div>
@@ -66,10 +67,11 @@
             <div class="number-input form-input" id="people-num-input">
               <div class="labels">
                 <label class="form-label" for="people-number">Number of People</label>
-                <h2 class="hidden" id="notZero">Can't be zero</h2>
+                <h2 class="hidden" id="person-zero">Can't be zero</h2>
+                <h2 class="hidden" id="person-error">Must be a number</h2>
               </div>
 
-              <input type="text" id="people-number" name="people-number" placeholder="0">
+              <input class="text-input" type="text" id="people-number" name="people-number" placeholder="0">
             </div>
 
           </form>
