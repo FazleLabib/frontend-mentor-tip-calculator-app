@@ -142,7 +142,7 @@ input[type=text]:focus {
 
 .tip-label {
     cursor: pointer;
-    width: 6rem;
+    max-width: 6rem;
     border-radius: 0.25rem;
     background-color: var(--very-dark-cyan);
     text-align: center;
@@ -165,7 +165,7 @@ input[type="radio"]:checked + .tip-label {
 
 #tip-custom {
     color: var(--very-dark-cyan);
-    width: 6.25rem;
+    max-width: 6.25rem;
     padding: 0.25rem;
 }
 
@@ -263,12 +263,12 @@ footer {
     }
 
     .tip-label {
-        width: 90%;
+        max-width: 9rem;
         font-size: 1.5rem;
     }
     
     #tip-custom {
-        width: 90%;;
+        max-width: 9.25rem;
     }
 
     footer {
