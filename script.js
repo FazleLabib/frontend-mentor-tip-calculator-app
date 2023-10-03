@@ -38,21 +38,14 @@ function getCustomTip() {
 }
 
 function calculateTip(billValue, numOfPeopleValue, tipValue) {
+    const billPerPerson = billValue / numOfPeopleValue;
+    const tipAmountPerPerson = billPerPerson * (tipValue / 100);
+    const totalPerPerson = tipAmountPerPerson + billPerPerson;
 
-    let bill = billValue;
-    let numOfPeople = numOfPeopleValue;
-    let tipPercentage = tipValue;
+    const tip = (Math.round(tipAmountPerPerson * 100) / 100).toFixed(2);
+    const total = (Math.round(totalPerPerson * 100) / 100).toFixed(2);
 
-    let billPerPerson = bill / numOfPeople;
-
-    let tipAmountPerPerson = billPerPerson * (tipPercentage / 100);
-
-    let totalPerPerson = tipAmountPerPerson + billPerPerson;
-
-    let display = {tip: (Math.round(tipAmountPerPerson * 100) / 100).toFixed(2),
-                total: (Math.round(totalPerPerson * 100) / 100).toFixed(2)};
-    
-    return display;
+    return { tip, total };
 }
 
 function reset() {
