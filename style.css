@@ -222,8 +222,8 @@ button[disabled]{
 }
 
 footer {
-    position: absolute;
-    bottom: 1rem;
+    position: relative;
+    top: 1rem;
 }
 
 .attribution { 
@@ -269,10 +269,6 @@ footer {
     
     #tip-custom {
         max-width: 9.25rem;
-    }
-
-    footer {
-        position: initial;
     }
 
 }
