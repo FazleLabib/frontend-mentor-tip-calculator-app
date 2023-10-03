@@ -49,30 +49,31 @@ function calculateTip(billValue, numOfPeopleValue, tipValue) {
 }
 
 function reset() {
+    const inputElements = [totalBill, customTip, peopleNumber];
+    
+    inputElements.forEach((element) => {
+        element.value = "";
+    });
 
-    totalZero.style.display = 'none';
-    totalError.style.display = 'none';
-    personZero.style.display = 'none';
-    personError.style.display = 'none';
-    customError.style.display = 'none';
-
-    customTip.classList.remove("invalid");
-    totalBill.classList.remove("invalid");
-    peopleNumber.classList.remove("invalid");
-
-    totalBill.value = "";
-    customTip.value = "";
-    peopleNumber.value = "";
-
-    tip.forEach(radio => {
+    tip.forEach((radio) => {
         radio.checked = false;
     });
 
     tipPerPerson.innerHTML = "$0.00";
     totalPerPerson.innerHTML = "$0.00";
 
+    const errorElements = [totalZero, totalError, personZero, personError, customError];
+    
+    errorElements.forEach((element) => {
+        element.style.display = 'none';
+    });
+
+    customTip.classList.remove("invalid");
+    totalBill.classList.remove("invalid");
+
     resetBtn.disabled = true;
 }
+
 
 function checkErrors() {
 
